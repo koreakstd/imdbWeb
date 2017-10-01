@@ -10,6 +10,9 @@
         "ecmaFeatures": {}
     },
     "rules": {
+        "react/prefer-stateless-function": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-indent": [1, 4],
         "semi": 2,
         "curly": [
             2,
@@ -21,6 +24,7 @@
                 "props": false
             }
         ],
+        "indent": [1, 4],
         "jsx-a11y/href-no-hash": "off",
         "operator-linebreak": [
             2,
@@ -33,7 +37,7 @@
             }
         ],
         "no-multi-str": 2,
-        "no-mixed-spaces-and-tabs": 2,
+        "no-mixed-spaces-and-tabs": 1,
         "no-trailing-spaces": 2,
         "space-unary-ops": [
             2,
@@ -78,5 +82,7 @@
             }
         ]
     },
-    "globals": {}
+    "globals": {
+        "document": false
+    }
 }
