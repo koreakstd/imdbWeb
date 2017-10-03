@@ -1,0 +1,47 @@
+.font_black {
+    color: black;
+    
+    &.small {
+        text-transform: lowercase;
+    }
+
+    &.large {
+        text-transform: uppercase;
+
+        &.data {
+            margin-top: 10px;
+        }
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+.font_red {
+    color: red;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.large {
+    font-size: 20px;
+}
+
+#id {
+    content : '';
+
+    &__data {
+        content: 'data';
+    }
+
+    &--damn {
+        content: 'damn';
+    }
+}
+
+.id {
+    position: absolute
+}

@@ -137,3 +137,4 @@ fabric.properties
 
 # Custom
 dist/*
+.vscode/settings.json
