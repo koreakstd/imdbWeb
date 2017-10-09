@@ -1,0 +1,27 @@
+{
+  "name": "movie.co",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Koreak Studio"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "node",
+    "js"
+  ],
+  "homepage": "https://github.com/koreakstd/imdbWeb",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "normalize.scss#^7.0.0",
+    "animatewithsass": "^3.2.2"
+  }
+}

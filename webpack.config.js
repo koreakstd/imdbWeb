@@ -12,7 +12,8 @@ const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Config variables
-let nodeEnv = process.env.NODE_ENV;
+// let nodeEnv = process.env.NODE_ENV;
+let nodeEnv = 'develop';
 nodeEnv = nodeEnv != null ? nodeEnv.replace(' ', '') : nodeEnv;
 const isProd = nodeEnv === 'production';
 
@@ -126,7 +127,7 @@ if (isProd) {
             use: [{
                 loader: 'css-loader',
                 options: {
-                    modules: true,
+                    // modules: true,
                     sourceMap: false,
                 },
             }, {
@@ -166,7 +167,7 @@ if (isProd) {
             use: [{
                 loader: 'css-loader',
                 options: {
-                    modules: true,
+                    // modules: true,
                     sourceMap: false,
                 },
             }, {
