@@ -1,0 +1,52 @@
+$type_transform: (
+    "cap": capitalize,
+    "inh": inherit,
+    "init": initial,
+    "lower": lowercase,
+    "none": none,
+    "unset": unset,
+    "upper": uppercase
+);
+
+@mixin font-face($name, $weight: 400, $style: normal, $color, $transform: none, $decoration: none, $line-height: 20) {
+    @include font-family($name);
+    @include font-weight($weight);
+    @include font-style($style);
+    @include font-color($style);
+    text-transform: text-transform($transform);
+    text-decoration: $decoration;
+    @include line-height($line-height);
+}
+
+
+@mixin font-family($name) {
+    font-family: $name
+}
+
+@mixin font-weight($weight) {
+    font-weight: $weight
+}
+
+@mixin font-style($style) {
+    font-style: $style
+}
+
+@mixin font-color($color) {
+    color: $color
+}
+
+@function text-transform($transform) {
+    @if map_has_key($type_transform, $transform) {
+        $transform: map_get($type_transform, $transform);
+
+        @return $transform;
+    } @else {
+        @warn 'There is not item "#{$transform}" in this list; chose one of: #{$type_transform}';
+        @return null;
+    }
+}
+
+@mixin line-height($height) {
+    line-height: $heightValue + px;
+	line-height: (0.0625 * $heightValue) + rem;
+}
