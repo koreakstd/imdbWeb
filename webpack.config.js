@@ -13,7 +13,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Config variables
 // let nodeEnv = process.env.NODE_ENV;
-let nodeEnv = 'develop';
+let nodeEnv = 'production';
 nodeEnv = nodeEnv != null ? nodeEnv.replace(' ', '') : nodeEnv;
 const isProd = nodeEnv === 'production';
 
@@ -193,7 +193,7 @@ module.exports = {
     // Source files; relative to context
     entry: {
         app: ['./js/app.js'],
-        vendor: ['react', 'react-dom'],
+        vendor: ['react', 'react-dom', './js/vendor.js'],
     },
 
     // Output directory

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import style from '../styles/main.scss';
+import '../styles/main.scss';
 
 class Home extends Component {
     render() {
-        return (<h1 className={style.font_red}>
+        return (<h1>
             Home page
             <p>Testing</p>
         </h1>);
