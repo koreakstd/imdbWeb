@@ -1,8 +1,4 @@
 @import "helpers/_variables.scss";
 
-@import "vendors/normalize-scss/sass/_normalize.scss";
-@import "vendors/animatewithsass/animate.scss";
-@include normalize();
-
 @import "helpers/_mixins.scss";
 @import "helpers/_helpers.scss";
