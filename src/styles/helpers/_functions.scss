@@ -7,3 +7,28 @@
         @return null;
     }
 }
+
+@function convert-typhograpy($value, $current-type, $convert-type) {
+    @if $current-type == px {
+        
+        @if $convert-type == ems {
+            @return '#{$value / 16}em';
+        } @else if $convert-type == percent {
+            @return percentage($value / 16);
+        }
+    } @else if $current-type == ems {
+        
+        @if $convert-type == px {
+            @return '#{$value * 16}px';
+        } @else if $convert-type == percent {
+            @return percentage($value);
+        }
+    }  @else if $current-type == percent {
+        
+        @if $convert-type == px {
+            @return '#{$value * 16 / 100}px';
+        } @else if $convert-type == ems {
+            @return '#{$value / 100}em';
+        }
+    }
+}
