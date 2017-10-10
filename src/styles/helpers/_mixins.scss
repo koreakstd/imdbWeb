@@ -1,6 +1,12 @@
 /// Mixin Karena sifatnya seperti function, 
 /// kita dapat mengunakannya berulang-ulang pada kode Sass yang kita miliki sesuai kebutuhan.
 
+@import "mixins/_animation.scss";
+@import "mixins/_background.scss";
+@import "mixins/_component.scss";
+@import "mixins/_transform.scss";
+@import "mixins/_typography.scss";
+
 $breakpoints: (
     "phone": 400px,
     "phone-wide": 480px,

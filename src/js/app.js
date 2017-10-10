@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (<h1 className={style.font_red}>
             Home page
-            <p>Hello</p>
+            <p>Testing</p>
         </h1>);
     }
 }
