@@ -1,0 +1,41 @@
+@import '../_mixins.scss';
+
+.border-all {
+    @include border(all, 1px, solid, $border-color)
+}
+
+.border-top {
+    @include border(top, 1px, solid, $border-color)
+}
+
+.border-bottom {
+    @include border(bottom, 1px, solid, $border-color)
+}
+
+.border-right {
+    @include border(right, 1px, solid, $border-color)
+}
+
+.border-left {
+    @include border(left, 1px, solid, $border-color)
+}
+
+.border-all--dark {
+    @include border(all, 1px, solid, $border-color--dark)
+}
+
+.border-top--dark {
+    @include border(top, 1px, solid, $border-color--dark)
+}
+
+.border-bottom--dark {
+    @include border(bottom, 1px, solid, $border-color--dark)
+}
+
+.border-right--dark {
+    @include border(right, 1px, solid, $border-color--dark)
+}
+
+.border-left--dark {
+    @include border(left, 1px, solid, $border-color--dark)
+}

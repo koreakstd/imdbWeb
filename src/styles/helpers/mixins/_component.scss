@@ -1,3 +1,5 @@
+@import '../_functions.scss';
+/// Box Shadow
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
     @if $inset {
         -webkit-box-shadow: inset $top $left $blur $color;
@@ -11,6 +13,7 @@
     }
 }
 
+/// Radius
 @mixin rounded($radius: .5em) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
@@ -21,8 +24,85 @@
     @include rounded(0em);
 }
 
+/// Border
+@mixin border($direction, $width, $type, $color) {
+    @if $direction==all {
+        @include border(left, $width, $type, $color);
+        @include border(right, $width, $type, $color);
+        @include border(top, $width, $type, $color);
+        @include border(bottom, $width, $type, $color);
+    }
+    @else {
+        border-#{$direction}: $width $type $color;
+    }
+}
+
+/// Opacity
 @mixin opacity($opacity) {
     opacity: $opacity;
     $opacity-ie: $opacity * 100;
     filter: alpha(opacity-$opacity-ie);
+}
+
+/// Margin
+@mixin margin($direction, $args...) {
+    @if $direction==all {
+        margin: $args
+    }
+    @else {
+        margin-#{$direction}: $args;
+    }
+}
+
+/// Padding
+@mixin padding($direction, $args...) {
+    @if $direction==all {
+        padding: $args
+    }
+    @else {
+        padding-#{$direction}: $args;
+    }
+}
+
+// Generalisasi class
+@mixin generate-class() {
+    @each $alias,
+    $detail in $space-prefixes {
+        @each $value in $space-values {
+            .#{$alias}-#{$value} {
+                #{$detail}: #{$value}px;
+                #{$detail}: #{convert-typhograpy($value, px, ems)}
+            }
+        }
+
+        .no-#{$alias} {
+            #{$detail}: 0px;
+        }
+    }
+    @each $value in $space-values {
+        .r-#{$value} {
+            @include rounded(#{$value}px);
+            @include rounded(#{convert-typhograpy($value, px, ems)});
+        }
+        .rt-#{$value} {
+            @include rounded(#{$value}px #{$value}px 0 0);
+            @include rounded(#{convert-typhograpy($value, px, ems)} #{convert-typhograpy($value, px, ems)} 0 0);
+        }
+        .rr-#{$value} {
+            @include rounded(0 #{$value}px #{$value}px 0);
+            @include rounded(0 #{convert-typhograpy($value, px, ems)} #{convert-typhograpy($value, px, ems)} 0);
+        }
+        .rb-#{$value} {
+            @include rounded(0 0 #{$value}px #{$value}px);
+            @include rounded(0 0 #{convert-typhograpy($value, px, ems)} #{convert-typhograpy($value, px, ems)});
+        }
+        .rl-#{$value} {
+            @include rounded(#{$value}px 0 0 #{$value}px);
+            @include rounded(#{convert-typhograpy($value, px, ems)} 0 0 #{convert-typhograpy($value, px, ems)});
+        }
+    }
+
+    .no-r {
+        @include no-rounded();
+    }
 }
