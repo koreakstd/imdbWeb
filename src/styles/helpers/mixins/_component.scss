@@ -37,6 +37,11 @@
     }
 }
 
+@mixin no-border() {
+    @include border(all, 0, solid, #000);
+
+}
+
 /// Opacity
 @mixin opacity($opacity) {
     opacity: $opacity;
@@ -66,8 +71,14 @@
 
 // Generalisasi class
 @mixin generate-class() {
-    @each $alias,
-    $detail in $space-prefixes {
+    @each $value in $z-index-values {
+        .z-index-#{$value} {
+            z-index: #{$value}px;
+            z-index: #{convert-typhograpy($value, px, ems)}
+        }
+    }
+
+    @each $alias, $detail in $space-prefixes {
         @each $value in $space-values {
             .#{$alias}-#{$value} {
                 #{$detail}: #{$value}px;

@@ -28,6 +28,23 @@ $space-values : (
     50
 ) !default;
 
+$z-index-values : (
+    1,
+    2,
+    3,
+    4,
+    5,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+)
+
 $space-prefixes : (
     p: padding,
     pt: padding-top,
