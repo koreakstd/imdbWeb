@@ -1,1 +1,17 @@
 @import '../_mixins.scss';
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.sticky {
+    position: sticky
+}

@@ -1,1 +1,31 @@
 @import '../_mixins.scss';
+
+.bold {
+    @include font-weight(bold);
+}
+
+.regular {
+    @include font-weight(normal);
+}
+
+.light {
+    @include font-weight(300);
+}
+
+.italic {
+    @include font-style(italic)
+}
+
+.break-word {
+    word-wrap: break-word;
+}
+
+.no-wrap {
+    white-space: nowrap
+}
+
+.truncate {
+    @extend .no-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
