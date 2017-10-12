@@ -13,7 +13,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Config variables
 // let nodeEnv = process.env.NODE_ENV;
-let nodeEnv = 'production';
+let nodeEnv = 'develop';
 nodeEnv = nodeEnv != null ? nodeEnv.replace(' ', '') : nodeEnv;
 const isProd = nodeEnv === 'production';
 
