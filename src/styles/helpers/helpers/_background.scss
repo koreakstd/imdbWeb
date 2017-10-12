@@ -1,0 +1,25 @@
+@import '../_mixins.scss';
+
+.white-bg {
+    @include background-color($white);
+}
+
+.gray-bg {
+    @include background-color($gray);
+}
+
+.dark-gray-bg {
+    @include background-color($darkgray);
+}
+
+.notice-bg {
+    @include background-color($notice);
+}
+
+.success-bg {
+    @include background-color($success);
+}
+
+.alert-bg {
+    @include background-color($alert);
+}

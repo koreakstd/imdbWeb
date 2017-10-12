@@ -1,0 +1,25 @@
+@import '../_mixins.scss';
+
+.white {
+    @include font-color($white);
+}
+
+.gray {
+    @include font-color($gray);
+}
+
+.dark-gray {
+    @include font-color($darkgray);
+}
+
+.notice {
+    @include font-color($notice);
+}
+
+.success {
+    @include font-color($success);
+}
+
+.alert {
+    @include font-color($alert);
+}
